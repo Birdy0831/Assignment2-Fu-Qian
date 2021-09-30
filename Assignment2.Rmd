@@ -1,0 +1,31 @@
+---
+title: "Assignment2(R markdown)"
+author: "FuQian"
+date: "9/30/2021"
+output: pdf_document
+---
+
+# Air quality dataset
+
+## Introduction
+Daily air quality measurements in **New York**, May to September 1973.
+
+## Make a data frame from the air quality dataset
+
+**1.** Take rows **1-10** from airquality dataset.
+
+
+**2.** **'aq'** is a data frame which includes rows 1-10 from airquality dataset.
+
+
+## Clean the dataset from NA values
+
+Using code *complete.case()* to **filter** the rows which contain NA in data set **'aq'**.
+
+```{r}
+aq<-data.frame(airquality[1:10,])
+print(aq)
+good<-complete.cases(aq)
+aq[good,]
+```
+
